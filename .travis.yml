@@ -9,4 +9,4 @@ install:
 
 script:
   - python -c "import pyranges_db; print(pyranges_db.__version__)"
-  - py.test -v
+  - py.test -v -m "not ftp"
