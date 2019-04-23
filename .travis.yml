@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.6"
+install:
+  - pip install cython pytest hypothesis pyranges
+  - python setup.py install
+  - python setup.py build_ext --inplace
+  - ls tests
+
+script:
+  - python -c "import pyranges_db; print(pyranges_db.__version__)"
+  - py.test -v
