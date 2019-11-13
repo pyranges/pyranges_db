@@ -1,2 +1,8 @@
+# 0.0.3 (16.07.19)
+- change GeneID/TranscriptID colnames to gene_id/transcript_id in UCSC
+
+# 0.0.2 (04.06.19)
+- add GWAS catalogue data
+
 # 0.0.1 (23.04.19)
 - move out from pyranges

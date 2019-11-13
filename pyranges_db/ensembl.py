@@ -1,4 +1,5 @@
 import os
+import pyranges as pr
 import pandas as pd
 
 import MySQLdb
@@ -68,7 +69,11 @@ def chromosome_sizes(genome, version="latest"):
 
     df = ensembl(genome, query, version)
 
-    return pd.Series(data=df.length.values, index=df.name.values)
+    df.columns = ["Chromosome", "End"]
+
+    df.insert(1, "Start", 0)
+
+    return pr.PyRanges(df)
 
 
 def genomes():
