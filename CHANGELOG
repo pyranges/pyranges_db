@@ -1,3 +1,6 @@
+# 0.0.6 (10.12.19)
+- add option nrows to gwas_catalog
+
 # 0.0.5 (10.12.19)
 - add gwas_catalog
 - call ExonID and ExonNumber exon_id and exon_number in UCSC
