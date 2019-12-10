@@ -3,7 +3,7 @@ import pandas as pd
 import pyranges as pr
 
 
-def gwas_catalogue():
+def gwas_catalog():
 
     f = "https://www.ebi.ac.uk/gwas/api/search/downloads/alternative"
     df = pd.read_csv(f, sep="\t", low_memory=False)

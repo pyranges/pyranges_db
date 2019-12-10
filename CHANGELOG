@@ -1,3 +1,11 @@
+# 0.0.5 (10.12.19)
+- add gwas_catalog
+- call ExonID and ExonNumber exon_id and exon_number in UCSC
+
+# 0.0.4 (13.09.19)
+- change default ucsc host
+- make host kw arg for ucsc
+
 # 0.0.3 (16.07.19)
 - change GeneID/TranscriptID colnames to gene_id/transcript_id in UCSC
 

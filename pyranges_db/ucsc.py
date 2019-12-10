@@ -38,7 +38,7 @@ def _exons(df):
     exons = pd.concat([pd.Series(s).reset_index(drop=True) for s in [chromosomes, exon_starts,
                                                                      exon_ends, feature, gene_ids, strands, transcript_ids, exon_numbers, transcript_name]], axis=1)
 
-    exons.columns = "Chromosome Start End Feature gene_id Strand transcript_id ExonNumber transcript_name".split()
+    exons.columns = "Chromosome Start End Feature gene_id Strand transcript_id exon_number transcript_name".split()
 
     return exons
 
@@ -108,9 +108,9 @@ def parse_genes(df):
     df.insert(df.shape[1], "transcript_id", range(len(df)))
 
     exons = _exons(df)
-    _df = (df.drop("XS XE".split(), axis=1).assign(Feature="transcript", ExonNumber=np.nan))
+    _df = (df.drop("XS XE".split(), axis=1).assign(Feature="transcript", exon_number=np.nan))
 
-    col_order = "Chromosome Start End Feature gene_id transcript_id Strand ExonNumber transcript_name".split()
+    col_order = "Chromosome Start End Feature gene_id transcript_id Strand exon_number transcript_name".split()
     _df = _df[col_order]
     exons = exons[col_order]
 
