@@ -1,3 +1,6 @@
+# 0.0.7 (03.02.20)
+- fix tiny bug in gwas catalog function
+
 # 0.0.6 (10.12.19)
 - add option nrows to gwas_catalog
 

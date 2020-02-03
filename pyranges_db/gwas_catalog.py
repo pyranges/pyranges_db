@@ -30,7 +30,7 @@ def gwas_catalog(nrows=None):
     df.loc[:, "Chromosome"] = new_chromosomes
 
     df = df.copy()
-    df.loc[:, "Start"] = df.Start.astype(int)
+    df.loc[:, "Start"] = df.Start.astype(float).astype(int)
     most_interesting_cols = ["Chromosome", "Start", "REGION", "SNP_GENE_IDS", "P-VALUE", "OR or BETA", "MAPPED_GENE", "MAPPED_TRAIT"]
     columns = [c for c in df.columns if c not in most_interesting_cols]
 
